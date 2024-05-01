@@ -1,0 +1,81 @@
+@charset "ISO-8859-1";
+/*style for body of the page*/
+.container{
+	float: left;
+	display: grid;
+	grid-template-columns: auto;
+	padding: 10px;
+}
+
+/*style for div enclosing the top nav buttons*/
+.nav{
+	position: relative;
+	margin: 1rem 0 1rem 0;
+	padding: 1rem 0 1rem .25em;
+	width: 100%;
+}
+
+/*style for each button*/
+.nav-item{
+	margin: .25rem .25em .25rem 0;
+	float: left;
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: .25rem 1rem .25rem 1rem;
+	background-color:  #76d7c4;
+}
+
+/* style applied when you on mouse over the navigation button*/
+.nav-item:hover{
+	background-color:  #ff7043 ;
+	transition: 0.7s;
+}
+
+/* style for visited a tag*/
+a:visited{
+	text-decoration: none;
+}
+
+/* style for div enclosing the cards*/
+.cards{
+	display: flex;
+   	flex-wrap: wrap;
+}
+
+/*style for card element - box where each type is enclosed*/
+.card {
+ 	flex: 1 0 500px;
+   	box-sizing: border-box;
+   	margin: 1rem .25em;
+   	border: 1px solid gray;
+   	border-radius: 8px;
+}
+
+/* On mouse-over to the card element, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container - style where type name, read more link is defined */
+.card-container {
+  padding: 2px 16px;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 8px 8px 0 0;
+}
+
+/*style for the changing layout when the width of the page is changed*/
+@media screen and (min-width: 40em) {
+    .card {
+       max-width: calc(50% -  1em);
+    }
+}
+
+/*style for the changing layout when the width of the page is changed*/
+@media screen and (min-width: 60em) {
+    .card {
+        max-width: calc(25% - 1em);
+    }
+}
